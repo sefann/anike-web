@@ -17,7 +17,7 @@ const heroImages = [
     id: 2,
     src: "/api/placeholder/600/800",
     alt: "AnikeBrands - Creative Design Work 2",
-    title: "Web Design Projects"
+    title: "Print Design Projects"
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const heroImages = [
     id: 4,
     src: "/api/placeholder/600/800",
     alt: "AnikeBrands - Creative Design Work 4",
-    title: "Mobile App Design"
+    title: "Photography Portfolio"
   }
 ]
 

@@ -19,7 +19,7 @@ const carouselTestimonials = [
     name: "Michael Chen",
     role: "Founder",
     company: "Fashion Forward",
-    text: "The e-commerce website design was outstanding. The user experience is smooth, and the conversion rate has improved by 35%. AnikeBrands understood our vision perfectly and brought it to life.",
+    text: "The print campaign design was outstanding. The visual impact is strong, and our brand recognition has improved by 35%. AnikeBrands understood our vision perfectly and brought it to life.",
     rating: 5
   },
   {

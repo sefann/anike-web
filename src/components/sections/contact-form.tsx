@@ -153,7 +153,6 @@ export function ContactForm() {
             >
               <option value="">Select a service</option>
               <option value="brand-identity">Brand Identity</option>
-              <option value="web-design">Web Design</option>
               <option value="print-design">Print Design</option>
               <option value="mobile-design">Mobile Design</option>
               <option value="photography">Photography</option>

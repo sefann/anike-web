@@ -6,7 +6,7 @@ import { CTASection } from "@/components/sections/cta-section"
 
 export const metadata = {
   title: "Contact - AnikeBrands",
-  description: "Get in touch with AnikeBrands for your next design project. Contact me for brand identity, web design, print design, and other creative services.",
+  description: "Get in touch with AnikeBrands for your next design project. Contact me for brand identity, print design, photography, and other creative services.",
 }
 
 export default function ContactPage() {

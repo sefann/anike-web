@@ -9,7 +9,7 @@ const experiences = [
     company: "Creative Studio Pro",
     location: "New York, NY",
     period: "2022 - Present",
-    description: "Leading design projects for Fortune 500 companies, managing a team of 3 designers, and developing brand identities that drive business growth.",
+    description: "Leading design projects for Fortune 500 companies, managing a team of 3 designers, and developing brand identities and print materials that drive business growth.",
     achievements: [
       "Increased client satisfaction by 40% through improved design processes",
       "Led 20+ successful brand identity projects",
@@ -21,9 +21,9 @@ const experiences = [
     company: "Digital Marketing Agency",
     location: "San Francisco, CA",
     period: "2020 - 2022",
-    description: "Created visual content for digital marketing campaigns, designed websites, and developed brand guidelines for startups and small businesses.",
+    description: "Created visual content for marketing campaigns, designed print materials, and developed brand guidelines for startups and small businesses.",
     achievements: [
-      "Designed 50+ websites with 95% client satisfaction rate",
+      "Designed 50+ print materials with 95% client satisfaction rate",
       "Developed brand identities for 30+ startups",
       "Improved campaign performance by 25% through better visual design"
     ]
@@ -48,7 +48,7 @@ const education = [
     school: "Art Institute of California",
     location: "Los Angeles, CA",
     period: "2015 - 2019",
-    description: "Specialized in digital design, branding, and visual communication with focus on user experience design."
+    description: "Specialized in graphic design, branding, and visual communication with focus on print design and typography."
   }
 ]
 

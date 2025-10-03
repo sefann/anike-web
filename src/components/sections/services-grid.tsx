@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { 
   Palette, 
-  Monitor, 
   FileText, 
   Smartphone, 
   Camera, 
@@ -30,22 +29,6 @@ const services = [
     ],
     startingPrice: "$1,500",
     timeline: "2-3 weeks"
-  },
-  {
-    id: "web-design",
-    icon: Monitor,
-    title: "Web Design & UI/UX",
-    description: "Modern, responsive web design with focus on user experience, conversion optimization, and mobile-first approach.",
-    features: [
-      "UI/UX Design",
-      "Responsive Layout",
-      "User Experience Research",
-      "Prototyping & Wireframes",
-      "Design System",
-      "Developer Handoff"
-    ],
-    startingPrice: "$2,500",
-    timeline: "3-4 weeks"
   },
   {
     id: "print-design",

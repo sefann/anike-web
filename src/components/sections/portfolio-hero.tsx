@@ -35,7 +35,7 @@ export function PortfolioHero() {
               <span className="text-sm text-muted-foreground">Filter by category:</span>
             </div>
             <div className="flex flex-wrap gap-2">
-              {["All", "Brand Identity", "Web Design", "Print Design", "Mobile Design"].map((category) => (
+              {["All", "Brand Identity", "Print Design", "Mobile Design", "Photography"].map((category) => (
                 <Button
                   key={category}
                   variant={category === "All" ? "default" : "outline"}

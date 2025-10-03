@@ -24,7 +24,7 @@ export function CTASection() {
           
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Let&apos;s collaborate to create something extraordinary. Whether you need a complete 
-            brand identity, a stunning website, or eye-catching marketing materials, 
+            brand identity, stunning print materials, or eye-catching marketing materials, 
             I&apos;m here to help you stand out from the crowd.
           </p>
 
