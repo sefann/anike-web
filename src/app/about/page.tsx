@@ -7,7 +7,7 @@ import { DownloadSection } from "@/components/sections/download-section"
 
 export const metadata = {
   title: "About - AnikeBrands",
-  description: "Learn more about AnikeBrands, a creative graphics designer with 5+ years of experience in branding, web design, and visual communication.",
+  description: "Learn more about AnikeBrands, a creative graphics designer with 5+ years of experience in branding, print design, and visual communication.",
 }
 
 export default function AboutPage() {

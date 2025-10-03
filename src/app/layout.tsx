@@ -4,8 +4,8 @@ import { ThemeProvider } from "@/lib/theme-provider";
 
 export const metadata: Metadata = {
   title: "AnikeBrands - Creative Graphics Designer",
-  description: "Professional graphics design services by AnikeBrands. Specializing in branding, logo design, web design, and creative visual solutions.",
-  keywords: "graphics design, branding, logo design, web design, creative design, AnikeBrands",
+  description: "Professional graphics design services by AnikeBrands. Specializing in branding, logo design, print design, and creative visual solutions.",
+  keywords: "graphics design, branding, logo design, print design, creative design, AnikeBrands",
   authors: [{ name: "AnikeBrands" }],
   creator: "AnikeBrands",
   openGraph: {
@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://anikebrands.com",
     title: "AnikeBrands - Creative Graphics Designer",
-    description: "Professional graphics design services by AnikeBrands. Specializing in branding, logo design, web design, and creative visual solutions.",
+    description: "Professional graphics design services by AnikeBrands. Specializing in branding, logo design, print design, and creative visual solutions.",
     siteName: "AnikeBrands",
   },
   twitter: {
     card: "summary_large_image",
     title: "AnikeBrands - Creative Graphics Designer",
-    description: "Professional graphics design services by AnikeBrands. Specializing in branding, logo design, web design, and creative visual solutions.",
+    description: "Professional graphics design services by AnikeBrands. Specializing in branding, logo design, print design, and creative visual solutions.",
     creator: "@anikebrands",
   },
   robots: {

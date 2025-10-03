@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { 
   Palette, 
-  Monitor, 
   PenTool, 
   FileText
 } from "lucide-react"
@@ -17,16 +16,6 @@ const skillCategories = [
       { name: "Figma", level: 90 },
       { name: "Sketch", level: 85 },
       { name: "Canva Pro", level: 80 }
-    ]
-  },
-  {
-    title: "Web Design",
-    icon: Monitor,
-    skills: [
-      { name: "UI/UX Design", level: 92 },
-      { name: "Responsive Design", level: 90 },
-      { name: "Prototyping", level: 88 },
-      { name: "User Research", level: 85 }
     ]
   },
   {
@@ -130,8 +119,8 @@ export function SkillsSection() {
           <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
             {[
               "Photography", "Video Editing", "Motion Graphics", "3D Design",
-              "Illustration", "Icon Design", "Social Media Design", "Email Design",
-              "Presentation Design", "Infographic Design", "Book Design", "Packaging"
+              "Illustration", "Icon Design", "Social Media Design", "Presentation Design",
+              "Infographic Design", "Book Design", "Packaging", "Typography"
             ].map((skill, index) => (
               <motion.span
                 key={skill}

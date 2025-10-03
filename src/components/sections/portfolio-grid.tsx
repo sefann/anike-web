@@ -18,12 +18,12 @@ const portfolioItems = [
   },
   {
     id: 2,
-    title: "Fashion E-commerce Website",
-    category: "Web Design",
-    description: "Modern, responsive e-commerce website design with focus on user experience and conversion optimization.",
+    title: "Fashion Brand Campaign",
+    category: "Print Design",
+    description: "Complete print campaign design for a fashion brand including posters, flyers, and marketing materials.",
     image: "/api/placeholder/600/400",
-    tags: ["UI/UX Design", "E-commerce", "Responsive"],
-    link: "/portfolio/fashion-ecommerce",
+    tags: ["Print Design", "Campaign", "Marketing"],
+    link: "/portfolio/fashion-campaign",
     featured: true
   },
   {
@@ -58,11 +58,11 @@ const portfolioItems = [
   },
   {
     id: 6,
-    title: "Tech Startup Website",
-    category: "Web Design",
-    description: "Corporate website design for a technology startup with modern aesthetics and clear messaging.",
+    title: "Tech Startup Branding",
+    category: "Brand Identity",
+    description: "Complete brand identity design for a technology startup with modern aesthetics and clear messaging.",
     image: "/api/placeholder/600/400",
-    tags: ["Corporate", "Web Design", "Technology"],
+    tags: ["Corporate", "Branding", "Technology"],
     link: "/portfolio/tech-startup",
     featured: false
   },

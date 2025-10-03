@@ -7,7 +7,7 @@ import { CTASection } from "@/components/sections/cta-section"
 
 export const metadata = {
   title: "Services - AnikeBrands",
-  description: "Professional graphics design services including brand identity, web design, print design, and more. Get custom design solutions for your business.",
+  description: "Professional graphics design services including brand identity, print design, photography, and more. Get custom design solutions for your business.",
 }
 
 export default function ServicesPage() {

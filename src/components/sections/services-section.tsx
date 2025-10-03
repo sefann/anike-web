@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { 
   Palette, 
-  Monitor, 
   FileText, 
   Smartphone, 
   Camera, 
@@ -18,12 +17,6 @@ const services = [
     title: "Brand Identity",
     description: "Complete brand identity design including logo, color palette, typography, and brand guidelines.",
     features: ["Logo Design", "Brand Guidelines", "Color Palette", "Typography"]
-  },
-  {
-    icon: Monitor,
-    title: "Web Design",
-    description: "Modern, responsive web design that converts visitors into customers with stunning visuals.",
-    features: ["UI/UX Design", "Responsive Layout", "User Experience", "Prototyping"]
   },
   {
     icon: FileText,

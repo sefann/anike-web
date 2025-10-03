@@ -36,7 +36,7 @@ export function AboutBio() {
                 </p>
                 
                 <p>
-                  I specialize in brand identity design, web design, and print materials, always 
+                  I specialize in brand identity design, print materials, and photography, always 
                   striving to create work that not only looks beautiful but also serves a purpose. 
                   Every project is an opportunity to push creative boundaries while maintaining 
                   the highest standards of quality and professionalism.

@@ -29,7 +29,6 @@ const quickLinks = [
 const services = [
   { name: "Brand Identity", href: "/services#brand-identity" },
   { name: "Logo Design", href: "/services#logo-design" },
-  { name: "Web Design", href: "/services#web-design" },
   { name: "Print Design", href: "/services#print-design" },
 ]
 

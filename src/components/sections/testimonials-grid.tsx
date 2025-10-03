@@ -23,9 +23,9 @@ const testimonials = [
     company: "Fashion Forward",
     image: "/api/placeholder/80/80",
     rating: 5,
-    text: "The e-commerce website design was outstanding. The user experience is smooth, and the conversion rate has improved by 35%. AnikeBrands understood our vision perfectly and brought it to life.",
-    project: "E-commerce Website",
-    link: "/portfolio/fashion-ecommerce"
+    text: "The print campaign design was outstanding. The visual impact is strong, and our brand recognition has improved by 35%. AnikeBrands understood our vision perfectly and brought it to life.",
+    project: "Print Campaign",
+    link: "/portfolio/fashion-campaign"
   },
   {
     id: 3,
@@ -67,8 +67,8 @@ const testimonials = [
     company: "TechStart Inc.",
     image: "/api/placeholder/80/80",
     rating: 5,
-    text: "The corporate website design was modern and professional. It perfectly represents our company values and has helped us attract more clients. The design process was smooth and collaborative.",
-    project: "Corporate Website",
+    text: "The corporate branding design was modern and professional. It perfectly represents our company values and has helped us attract more clients. The design process was smooth and collaborative.",
+    project: "Corporate Branding",
     link: "/portfolio/tech-startup"
   }
 ]

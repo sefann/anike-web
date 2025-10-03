@@ -5,7 +5,7 @@ import { CTASection } from "@/components/sections/cta-section"
 
 export const metadata = {
   title: "Portfolio - AnikeBrands",
-  description: "Explore my portfolio of creative design projects including brand identity, web design, print design, and more. See how I bring ideas to life through design.",
+  description: "Explore my portfolio of creative design projects including brand identity, print design, photography, and more. See how I bring ideas to life through design.",
 }
 
 export default function PortfolioPage() {
