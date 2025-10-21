@@ -14,7 +14,7 @@ const testimonials = [
     rating: 5,
     text: "AnikeBrands transformed our brand identity completely. The logo design exceeded our expectations, and the brand guidelines were incredibly detailed. Our brand recognition has increased by 40% since the rebrand.",
     project: "Brand Identity Design",
-    link: "/portfolio/ecotech-brand"
+    link: "/projects/ecotech-brand"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const testimonials = [
     rating: 5,
     text: "The print campaign design was outstanding. The visual impact is strong, and our brand recognition has improved by 35%. AnikeBrands understood our vision perfectly and brought it to life.",
     project: "Print Campaign",
-    link: "/portfolio/fashion-campaign"
+    link: "/projects/fashion-campaign"
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const testimonials = [
     rating: 5,
     text: "The menu design was elegant and perfectly captured our restaurant's atmosphere. The custom illustrations and typography choices were spot-on. Our customers love the new design.",
     project: "Restaurant Menu Design",
-    link: "/portfolio/restaurant-menu"
+    link: "/projects/restaurant-menu"
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const testimonials = [
     rating: 5,
     text: "The mobile app design was intuitive and engaging. The user interface flows perfectly, and the visual design motivates users to stay active. User engagement has increased by 50%.",
     project: "Fitness App Design",
-    link: "/portfolio/fitness-app"
+    link: "/projects/fitness-app"
   },
   {
     id: 5,
@@ -58,7 +58,7 @@ const testimonials = [
     rating: 5,
     text: "The complete branding package was exactly what we needed. From logo to packaging design, everything was cohesive and professional. Our sales have increased by 25% since the rebrand.",
     project: "Coffee Shop Branding",
-    link: "/portfolio/coffee-shop"
+    link: "/projects/coffee-shop"
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ const testimonials = [
     rating: 5,
     text: "The corporate branding design was modern and professional. It perfectly represents our company values and has helped us attract more clients. The design process was smooth and collaborative.",
     project: "Corporate Branding",
-    link: "/portfolio/tech-startup"
+    link: "/projects/tech-startup"
   }
 ]
 
@@ -164,7 +164,7 @@ export function TestimonialsGrid() {
                 <a href="/contact">Start Your Project</a>
               </Button>
               <Button asChild variant="outline">
-                <a href="/portfolio">View My Work</a>
+                <a href="/projects">View Our Projects</a>
               </Button>
             </div>
           </div>

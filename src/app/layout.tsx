@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   keywords: "graphics design, branding, logo design, print design, creative design, AnikeBrands",
   authors: [{ name: "AnikeBrands" }],
   creator: "AnikeBrands",
+  icons: {
+    icon: "/anikefavicon-white.svg",
+    shortcut: "/anikefavicon-white.svg",
+    apple: "/anikefavicon-white.svg",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

@@ -24,8 +24,8 @@ export function CTASection() {
           
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Let&apos;s collaborate to create something extraordinary. Whether you need a complete 
-            brand identity, stunning print materials, or eye-catching marketing materials, 
-            I&apos;m here to help you stand out from the crowd.
+            brand identity, stunning visual communication, or strategic brand positioning, 
+            we&apos;re here to help you stand out and connect with your audience.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">

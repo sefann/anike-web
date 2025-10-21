@@ -8,40 +8,51 @@ import {
   Clock, 
   MessageCircle,
   Calendar,
-  CheckCircle
+  CheckCircle,
+  Linkedin,
+  Instagram,
+  Twitter
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { companyInfo } from "@/data/company-info"
 
 const contactMethods = [
   {
     icon: Mail,
     title: "Email",
-    description: "Send me an email and I'll respond within 24 hours",
-    value: "hello@anikebrands.com",
-    action: "mailto:hello@anikebrands.com"
+    description: "Send us an email and we'll respond within 24 hours",
+    value: companyInfo.email.primary,
+    action: `mailto:${companyInfo.email.primary}`
   },
   {
     icon: Phone,
     title: "Phone",
-    description: "Call me for urgent projects or detailed discussions",
-    value: "+1 (555) 123-4567",
-    action: "tel:+15551234567"
+    description: "Call us for urgent projects or detailed discussions",
+    value: companyInfo.phone.formatted,
+    action: `tel:${companyInfo.phone.number}`
+  },
+  {
+    icon: MessageCircle,
+    title: "WhatsApp",
+    description: "Message us on WhatsApp for quick responses",
+    value: companyInfo.phone.formatted,
+    action: `https://wa.me/${companyInfo.phone.whatsapp}`
   },
   {
     icon: MapPin,
     title: "Location",
-    description: "Based in New York, serving clients worldwide",
-    value: "New York, NY",
+    description: "Based in Nigeria, serving clients worldwide",
+    value: companyInfo.location.country,
     action: "#"
   }
 ]
 
 const socialLinks = [
-  { name: "LinkedIn", href: "#", icon: "💼" },
-  { name: "Instagram", href: "#", icon: "📸" },
-  { name: "Twitter", href: "#", icon: "🐦" },
-  { name: "Behance", href: "#", icon: "🎨" }
+  { name: "LinkedIn", href: companyInfo.social.linkedin, icon: Linkedin },
+  { name: "Instagram", href: companyInfo.social.instagram, icon: Instagram },
+  { name: "Twitter", href: companyInfo.social.twitter, icon: Twitter },
+  { name: "TikTok", href: companyInfo.social.tiktok, icon: MessageCircle }
 ]
 
 const faqs = [
@@ -53,10 +64,6 @@ const faqs = [
     question: "Do you offer revisions?",
     answer: "Yes! All projects include revisions. The number depends on the package you choose, ranging from 2-5 revisions to unlimited revisions for enterprise projects."
   },
-  {
-    question: "What's included in the initial consultation?",
-    answer: "The free consultation includes project discussion, timeline planning, budget estimation, and strategy development. No obligation required."
-  }
 ]
 
 export function ContactInfo() {
@@ -101,12 +108,14 @@ export function ContactInfo() {
 
       {/* Social Links */}
       <div>
-        <h3 className="text-xl font-semibold mb-6">Follow Me</h3>
+        <h3 className="text-xl font-semibold mb-6">Follow Us</h3>
         <div className="flex space-x-4">
           {socialLinks.map((social, index) => (
             <motion.a
               key={social.name}
               href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -114,7 +123,7 @@ export function ContactInfo() {
               whileHover={{ scale: 1.1, y: -2 }}
               className="w-12 h-12 bg-background border border-border rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
             >
-              <span className="text-lg">{social.icon}</span>
+              <social.icon className="h-5 w-5" />
             </motion.a>
           ))}
         </div>
@@ -168,19 +177,6 @@ export function ContactInfo() {
         </div>
       </div>
 
-      {/* CTA */}
-      <div className="bg-gradient-primary/10 border border-primary/20 rounded-lg p-6 text-center">
-        <h3 className="text-lg font-semibold mb-2">Ready to Get Started?</h3>
-        <p className="text-sm text-muted-foreground mb-4">
-            Let&apos;s discuss your project and create something amazing together.
-        </p>
-        <Button asChild className="bg-gradient-primary hover:opacity-90 text-white">
-          <Link href="#contact-form">
-            <MessageCircle className="mr-2 h-4 w-4" />
-            Start Your Project
-          </Link>
-        </Button>
-      </div>
     </motion.div>
   )
 }

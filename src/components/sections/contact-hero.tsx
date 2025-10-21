@@ -4,10 +4,30 @@ import { motion } from "framer-motion"
 import { Mail, MessageCircle, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 
 export function ContactHero() {
   return (
-    <section className="pt-20 pb-16 bg-muted/30">
+    <section className="relative pt-20 pb-16 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/assets/contact-banner.png"
+          alt="Contact - AnikeBrands"
+          fill
+          priority
+          quality={85}
+          className="object-cover"
+          sizes="100vw"
+        />
+      </div>
+      
+      {/* Color Overlay - Darkened */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/92 to-background/95" />
+      <div className="absolute inset-0 bg-muted/40" />
+      
+      {/* Content */}
+      <div className="relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -25,44 +45,8 @@ export function ContactHero() {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8"
-          >
-            <div className="flex items-center justify-center space-x-2">
-              <Mail className="h-5 w-5 text-primary" />
-              <span className="text-sm">hello@anikebrands.com</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2">
-              <MessageCircle className="h-5 w-5 text-primary" />
-              <span className="text-sm">24h Response Time</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2">
-              <Clock className="h-5 w-5 text-primary" />
-              <span className="text-sm">Free Consultation</span>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 text-white">
-              <Link href="#contact-form">
-                Start Your Project
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/portfolio">
-                View My Work
-              </Link>
-            </Button>
-          </motion.div>
         </div>
+      </div>
       </div>
     </section>
   )

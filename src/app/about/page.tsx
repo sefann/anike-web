@@ -3,7 +3,6 @@ import { AboutHero } from "@/components/sections/about-hero"
 import { AboutBio } from "@/components/sections/about-bio"
 import { SkillsSection } from "@/components/sections/skills-section"
 import { ExperienceSection } from "@/components/sections/experience-section"
-import { DownloadSection } from "@/components/sections/download-section"
 
 export const metadata = {
   title: "About - AnikeBrands",
@@ -17,7 +16,6 @@ export default function AboutPage() {
       <AboutBio />
       <SkillsSection />
       <ExperienceSection />
-      <DownloadSection />
     </Layout>
   )
 }

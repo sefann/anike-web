@@ -4,10 +4,30 @@ import { motion } from "framer-motion"
 import { ArrowRight, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 
 export function ServicesHero() {
   return (
-    <section className="pt-20 pb-16 bg-muted/30">
+    <section className="relative pt-20 pb-16 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/assets/service-banner.png"
+          alt="Services - AnikeBrands"
+          fill
+          priority
+          quality={85}
+          className="object-cover"
+          sizes="100vw"
+        />
+      </div>
+      
+      {/* Color Overlay - Darkened */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/92 to-background/95" />
+      <div className="absolute inset-0 bg-muted/40" />
+      
+      {/* Content */}
+      <div className="relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -60,12 +80,13 @@ export function ServicesHero() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/portfolio">
+              <Link href="/projects">
                 View My Work
               </Link>
             </Button>
           </motion.div>
         </div>
+      </div>
       </div>
     </section>
   )

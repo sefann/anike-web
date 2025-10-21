@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
@@ -12,8 +13,8 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Portfolio", href: "/portfolio" },
-  { name: "Testimonials", href: "/testimonials" },
+  { name: "Projects", href: "/projects" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
 ]
 
@@ -43,24 +44,31 @@ export function Header() {
       }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold text-gradient"
+              className="relative h-56 w-80"
             >
-              AnikeBrands
+              <Image
+                src="/anike logos/AnikeBrands-02.svg"
+                alt="AnikeBrands Logo"
+                fill
+                priority
+                className="object-contain object-left"
+                sizes="320px"
+              />
             </motion.div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
+          <div className="hidden md:flex items-center space-x-6">
+            {navigation.slice(0, -1).map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative text-sm font-medium transition-colors hover:text-primary ${
+                className={`relative text-sm font-medium transition-colors hover:text-primary whitespace-nowrap ${
                   pathname === item.href
                     ? "text-primary"
                     : "text-foreground/80"
@@ -77,10 +85,15 @@ export function Header() {
                 )}
               </Link>
             ))}
+            <Button asChild size="sm" className="bg-white text-primary hover:bg-primary hover:text-white border-primary whitespace-nowrap">
+              <Link href="/contact">
+                Contact
+              </Link>
+            </Button>
           </div>
 
           {/* Theme Toggle & Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
             <ThemeToggle />
             <Button
               variant="ghost"

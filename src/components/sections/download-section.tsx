@@ -53,7 +53,7 @@ export function DownloadSection() {
 
             <div className="space-y-4">
               <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 text-white w-full sm:w-auto">
-                <Link href="/portfolio/anikebrands-portfolio.pdf" download>
+                <Link href="/projects/anikebrands-portfolio.pdf" download>
                   <Download className="mr-2 h-4 w-4" />
                   Download Portfolio PDF
                 </Link>
@@ -73,7 +73,7 @@ export function DownloadSection() {
               </Link>
             </Button>
             <Button asChild variant="ghost" size="lg">
-              <Link href="/portfolio">
+              <Link href="/projects">
                 View Online Portfolio
               </Link>
             </Button>

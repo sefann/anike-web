@@ -1,29 +1,37 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { 
-  Facebook, 
   Twitter, 
   Instagram, 
   Linkedin, 
   Mail, 
   Phone,
-  MapPin
+  MapPin,
+  MessageCircle
 } from "lucide-react"
+import { companyInfo } from "@/data/company-info"
 
 const socialLinks = [
-  { name: "Facebook", href: "#", icon: Facebook },
-  { name: "Twitter", href: "#", icon: Twitter },
-  { name: "Instagram", href: "#", icon: Instagram },
-  { name: "LinkedIn", href: "#", icon: Linkedin },
+  { name: "LinkedIn", href: companyInfo.social.linkedin, icon: Linkedin },
+  { name: "Instagram", href: companyInfo.social.instagram, icon: Instagram },
+  { name: "TikTok", href: companyInfo.social.tiktok, icon: MessageCircle },
+  { name: "Twitter", href: companyInfo.social.twitter, icon: Twitter },
 ]
 
 const quickLinks = [
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Portfolio", href: "/portfolio" },
+  { name: "Projects", href: "/projects" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
+]
+
+const legalLinks = [
+  { name: "Privacy Policy", href: "/privacy" },
+  { name: "Terms of Service", href: "/terms" },
 ]
 
 const services = [
@@ -36,7 +44,7 @@ export function Footer() {
   return (
     <footer className="bg-muted/30 border-t border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -45,18 +53,28 @@ export function Footer() {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <Link href="/" className="text-2xl font-bold text-gradient">
-              AnikeBrands
+            <Link href="/" className="inline-block">
+              <div className="relative h-56 w-[64rem]">
+                <Image
+                  src="/anike logos/AnikeBrands-02.svg"
+                  alt="AnikeBrands Logo"
+                  fill
+                  className="object-contain object-left"
+                  sizes="1024px"
+                />
+              </div>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Creating exceptional visual experiences through innovative design solutions. 
-              Let&apos;s bring your brand to life with creativity and precision.
+              We don&apos;t just build brands. We nurture them. Creating identities that tell stories, 
+              connect emotionally, and inspire action through intention, creativity, and strategy.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <motion.a
                   key={social.name}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   className="p-2 rounded-full bg-background border border-border hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -114,6 +132,29 @@ export function Footer() {
             </ul>
           </motion.div>
 
+          {/* Legal Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="space-y-4"
+          >
+            <h3 className="text-lg font-semibold">Legal</h3>
+            <ul className="space-y-2">
+              {legalLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -124,22 +165,39 @@ export function Footer() {
           >
             <h3 className="text-lg font-semibold">Get In Touch</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-primary" />
+              <a 
+                href={`mailto:${companyInfo.email.primary}`}
+                className="flex items-center space-x-3 hover:text-primary transition-colors"
+              >
+                <Mail className="h-4 w-4 text-primary flex-shrink-0" />
                 <span className="text-muted-foreground text-sm">
-                  hello@anikebrands.com
+                  {companyInfo.email.primary}
                 </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-primary" />
+              </a>
+              <a 
+                href={`tel:${companyInfo.phone.number}`}
+                className="flex items-center space-x-3 hover:text-primary transition-colors"
+              >
+                <Phone className="h-4 w-4 text-primary flex-shrink-0" />
                 <span className="text-muted-foreground text-sm">
-                  +1 (555) 123-4567
+                  {companyInfo.phone.formatted}
                 </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-4 w-4 text-primary" />
+              </a>
+              <a 
+                href={`https://wa.me/${companyInfo.phone.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-3 hover:text-primary transition-colors"
+              >
+                <MessageCircle className="h-4 w-4 text-primary flex-shrink-0" />
                 <span className="text-muted-foreground text-sm">
-                  New York, NY
+                  WhatsApp: {companyInfo.phone.formatted}
+                </span>
+              </a>
+              <div className="flex items-center space-x-3">
+                <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
+                <span className="text-muted-foreground text-sm">
+                  {companyInfo.location.country}
                 </span>
               </div>
             </div>

@@ -4,10 +4,30 @@ import { motion } from "framer-motion"
 import { Download, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 
 export function AboutHero() {
   return (
-    <section className="pt-20 pb-16 bg-muted/30">
+    <section className="relative pt-20 pb-16 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/assets/about-banner.png"
+          alt="About AnikeBrands"
+          fill
+          priority
+          quality={85}
+          className="object-cover"
+          sizes="100vw"
+        />
+      </div>
+      
+      {/* Color Overlay - Darkened */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/92 to-background/95" />
+      <div className="absolute inset-0 bg-muted/40" />
+      
+      {/* Content */}
+      <div className="relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -22,8 +42,8 @@ export function AboutHero() {
               <span className="text-foreground">AnikeBrands</span>
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Passionate about creating visual experiences that tell stories, 
-              build connections, and drive results.
+              &ldquo;Anike,&rdquo; a Yoruba name meaning &ldquo;to care for&rdquo; is the heart of everything we do. 
+              We create identities that tell stories, connect emotionally, and inspire action.
             </p>
           </motion.div>
 
@@ -34,7 +54,7 @@ export function AboutHero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 text-white">
-              <Link href="/portfolio/anikebrands-portfolio.pdf" download>
+              <Link href="/projects/anikebrands-portfolio.pdf" download>
                 <Download className="mr-2 h-4 w-4" />
                 Download Portfolio
               </Link>
@@ -47,6 +67,7 @@ export function AboutHero() {
             </Button>
           </motion.div>
         </div>
+      </div>
       </div>
     </section>
   )

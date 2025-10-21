@@ -13,7 +13,7 @@ const featuredProjects = [
     description: "Complete brand identity design for a sustainable technology startup, including logo, color palette, and brand guidelines.",
     image: "/api/placeholder/600/400",
     tags: ["Logo Design", "Brand Guidelines", "Color Palette"],
-    link: "/portfolio/ecotech-brand"
+    link: "/projects/ecotech-brand"
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const featuredProjects = [
     description: "Complete print campaign design for a fashion brand including posters, flyers, and marketing materials.",
     image: "/api/placeholder/600/400",
     tags: ["Print Design", "Campaign", "Marketing"],
-    link: "/portfolio/fashion-campaign"
+    link: "/projects/fashion-campaign"
   },
   {
     id: 3,
@@ -31,14 +31,31 @@ const featuredProjects = [
     description: "Elegant menu design for a fine dining restaurant with custom illustrations and typography.",
     image: "/api/placeholder/600/400",
     tags: ["Print Design", "Typography", "Illustration"],
-    link: "/portfolio/restaurant-menu"
+    link: "/projects/restaurant-menu"
   }
 ]
 
 export function FeaturedWorkSection() {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <div 
+          className="w-full h-full"
+          style={{
+            backgroundImage: "url('/assets/genback.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat"
+          }}
+        />
+      </div>
+      
+      {/* Color Overlay */}
+      <div className="absolute inset-0 bg-background/95" />
+      <div className="absolute inset-0 bg-black/20" />
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -122,7 +139,7 @@ export function FeaturedWorkSection() {
           className="text-center mt-12"
         >
           <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 text-white">
-            <Link href="/portfolio">
+            <Link href="/projects">
               View All Projects
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>

@@ -17,82 +17,98 @@ const services = [
   {
     id: "brand-identity",
     icon: Palette,
-    title: "Brand Identity Design",
-    description: "Complete brand identity packages including logo design, color palette, typography, and comprehensive brand guidelines.",
+    title: "Brand Identity Design & Strategy",
+    description: "Building cohesive, strategic, and timeless brand systems that truly represent your vision and values.",
     features: [
-      "Logo Design (3 concepts)",
-      "Brand Guidelines Document",
-      "Color Palette & Typography",
-      "Business Card Design",
-      "Letterhead & Envelope Design",
-      "Social Media Templates"
+      "Logo Design",
+      "Comprehensive Brand Guidelines",
+      "Color Systems & Typography",
+      "Brand Strategy",
+      "Visual Identity System",
+      "Brand Positioning"
     ],
-    startingPrice: "$1,500",
+    startingPrice: "Contact",
+    timeline: "2-4 weeks"
+  },
+  {
+    id: "visual-communication",
+    icon: FileText,
+    title: "Visual Communication & Collateral Design",
+    description: "Designing high-impact pitch decks, magazines, brochures, and print materials that speak with elegance and intention.",
+    features: [
+      "Pitch Decks",
+      "Magazines & Publications",
+      "Brochures & Flyers",
+      "Print Materials",
+      "Marketing Collateral",
+      "Print-Ready Files"
+    ],
+    startingPrice: "Contact",
+    timeline: "1-3 weeks"
+  },
+  {
+    id: "brand-strategy",
+    icon: PenTool,
+    title: "Brand Strategy & Positioning",
+    description: "Helping brands find and own their unique voice in the marketplace through strategic planning.",
+    features: [
+      "Brand Voice Development",
+      "Market Positioning",
+      "Strategic Planning",
+      "Brand Messaging",
+      "Audience Analysis",
+      "Competitive Analysis"
+    ],
+    startingPrice: "Contact",
     timeline: "2-3 weeks"
   },
   {
-    id: "print-design",
-    icon: FileText,
-    title: "Print Design",
-    description: "Professional print materials including business cards, brochures, posters, and marketing collateral.",
-    features: [
-      "Business Cards",
-      "Brochures & Flyers",
-      "Posters & Banners",
-      "Marketing Materials",
-      "Packaging Design",
-      "Print-Ready Files"
-    ],
-    startingPrice: "$800",
-    timeline: "1-2 weeks"
-  },
-  {
-    id: "mobile-design",
+    id: "motion-design",
     icon: Smartphone,
-    title: "Mobile App Design",
-    description: "Mobile-first design for iOS and Android apps with intuitive user interfaces and seamless user experience.",
+    title: "Motion & Digital Design",
+    description: "Translating brand stories into dynamic, captivating visuals that engage and inspire your audience.",
     features: [
-      "Mobile UI Design",
-      "App Icon Design",
-      "User Flow Design",
-      "Prototyping",
-      "Design System",
-      "App Store Graphics"
+      "Motion Graphics",
+      "Digital Assets",
+      "Video Design",
+      "Animations",
+      "Social Media Content",
+      "Dynamic Visuals"
     ],
-    startingPrice: "$3,000",
-    timeline: "4-5 weeks"
+    startingPrice: "Contact",
+    timeline: "2-4 weeks"
   },
   {
-    id: "photography",
+    id: "social-media",
     icon: Camera,
-    title: "Photography Services",
-    description: "Professional photography for products, portraits, events, and marketing imagery with post-processing.",
+    title: "Social Media Design & Strategy",
+    description: "Shaping visual narratives that enhance your brand presence and community engagement across platforms.",
     features: [
-      "Product Photography",
-      "Portrait Sessions",
-      "Event Photography",
-      "Marketing Images",
-      "Photo Editing",
-      "High-Resolution Files"
+      "Social Media Graphics",
+      "Content Strategy",
+      "Brand Consistency",
+      "Community Engagement",
+      "Platform Optimization",
+      "Visual Storytelling"
     ],
-    startingPrice: "$500",
-    timeline: "1 week"
+    startingPrice: "Contact",
+    timeline: "Ongoing"
   },
   {
-    id: "illustration",
+    id: "event-branding",
     icon: PenTool,
-    title: "Custom Illustration",
-    description: "Custom illustrations, icons, and graphics that bring your ideas to life with artistic flair and creativity.",
+    title: "Event & Experiential Branding",
+    description: "Designing cohesive, memorable brand experiences across events and touchpoints.",
     features: [
-      "Custom Illustrations",
-      "Icon Design",
-      "Vector Graphics",
-      "Digital Art",
-      "Character Design",
-      "Multiple Formats"
+      "Event Branding",
+      "Signage Design",
+      "Event Collateral",
+      "Experiential Design",
+      "Brand Activation",
+      "Event Materials"
     ],
-    startingPrice: "$300",
-    timeline: "1-2 weeks"
+    startingPrice: "Contact",
+    timeline: "3-5 weeks"
   }
 ]
 
@@ -108,11 +124,11 @@ export function ServicesGrid() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            <span className="text-gradient">What I Offer</span>
+            <span className="text-gradient">Our Services</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive design services tailored to your needs, from concept to completion, 
-            with a focus on quality, creativity, and results.
+            A full suite of design and brand communication services, tailored to help 
+            businesses tell their stories beautifully and strategically.
           </p>
         </motion.div>
 
@@ -174,7 +190,7 @@ export function ServicesGrid() {
           className="text-center mt-12"
         >
           <p className="text-muted-foreground mb-4">
-            Need a custom solution? I&apos;m here to help with any design challenge.
+            Need a custom solution? We&apos;re here to help with any design challenge.
           </p>
           <Button asChild size="lg" variant="outline">
             <Link href="/contact">

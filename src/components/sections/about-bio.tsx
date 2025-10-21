@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Award, Users, Clock, Target } from "lucide-react"
+import Image from "next/image"
 
 const stats = [
   { icon: Award, value: "50+", label: "Projects Completed" },
@@ -12,63 +13,44 @@ const stats = [
 
 export function AboutBio() {
   return (
-    <section className="py-20">
+    <section className="py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="space-y-6"
+              className="space-y-4"
             >
-              <h2 className="text-3xl sm:text-4xl font-bold">
+              <h2 className="text-2xl sm:text-3xl font-bold">
                 <span className="text-gradient">My Story</span>
               </h2>
               
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
-                  Hi, I&apos;m AnikeBrands, a passionate graphics designer with over 5 years of experience 
-                  in creating compelling visual identities and digital experiences. My journey began 
-                  with a simple love for art and design, which has evolved into a career dedicated 
-                  to helping businesses tell their stories through powerful visual communication.
+                  Founded by <strong className="text-foreground">Olamide Fatosin</strong>, a Brand Identity Designer with a 
+                  B.A. in Linguistics, Anike Brands is built on a deep understanding of communication, 
+                  culture, and design psychology. We don&apos;t just design visuals; we create identities 
+                  that tell stories, connect emotionally, and inspire action.
                 </p>
                 
                 <p>
-                  I specialize in brand identity design, print materials, and photography, always 
-                  striving to create work that not only looks beautiful but also serves a purpose. 
-                  Every project is an opportunity to push creative boundaries while maintaining 
-                  the highest standards of quality and professionalism.
+                  We blend the art of design with the science of communication. This unique approach 
+                  allows us to create brands that not only look good but speak clearly to the right audience. 
+                  Every brand deserves to be nurtured with intention, creativity, and strategy.
                 </p>
                 
                 <p>
-                  When I&apos;m not designing, you&apos;ll find me exploring new design trends, experimenting 
-                  with different creative techniques, or collaborating with fellow creatives to 
-                  bring innovative ideas to life.
+                  At Anike Brands, every project is handled with care because your brand deserves more 
+                  than just attention; it deserves affection. We treat every project like it&apos;s our own. 
+                  We truly care about your brand&apos;s growth, your audience&apos;s experience, and your story&apos;s impact.
                 </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="space-y-8"
-            >
-              {/* Profile Image Placeholder */}
-              <div className="aspect-square bg-muted/50 rounded-2xl flex items-center justify-center">
-                <div className="text-muted-foreground text-center">
-                  <div className="w-32 h-32 bg-gradient-primary rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-white text-2xl font-bold">AB</span>
-                  </div>
-                  <p className="text-sm">Profile Photo</p>
-                </div>
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-4 gap-4">
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -83,6 +65,26 @@ export function AboutBio() {
                     <div className="text-sm text-muted-foreground">{stat.label}</div>
                   </motion.div>
                 ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="flex justify-center lg:justify-end"
+            >
+              {/* Profile Image */}
+              <div className="aspect-square w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/anike photos/anikesix.png"
+                  alt="Olamide Fatosin - AnikeBrands Founder"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
             </motion.div>
           </div>

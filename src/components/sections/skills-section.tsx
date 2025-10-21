@@ -4,8 +4,10 @@ import { motion } from "framer-motion"
 import { 
   Palette, 
   PenTool, 
-  FileText
+  FileText,
+  Smartphone
 } from "lucide-react"
+import Image from "next/image"
 
 const skillCategories = [
   {
@@ -29,6 +31,16 @@ const skillCategories = [
     ]
   },
   {
+    title: "Product Design",
+    icon: Smartphone,
+    skills: [
+      { name: "UI/UX Design", level: 88 },
+      { name: "Web Design", level: 85 },
+      { name: "User Interface", level: 87 },
+      { name: "Prototyping", level: 82 }
+    ]
+  },
+  {
     title: "Print Design",
     icon: FileText,
     skills: [
@@ -42,7 +54,25 @@ const skillCategories = [
 
 export function SkillsSection() {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="relative py-20 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/assets/about-banner.png"
+          alt="Skills Background"
+          fill
+          quality={80}
+          className="object-cover"
+          sizes="100vw"
+        />
+      </div>
+      
+      {/* Color Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/92 to-background/95" />
+      <div className="absolute inset-0 bg-muted/40" />
+      
+      {/* Content */}
+      <div className="relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -60,7 +90,7 @@ export function SkillsSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -135,6 +165,7 @@ export function SkillsSection() {
             ))}
           </div>
         </motion.div>
+      </div>
       </div>
     </section>
   )

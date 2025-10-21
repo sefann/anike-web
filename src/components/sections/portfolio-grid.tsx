@@ -13,7 +13,7 @@ const portfolioItems = [
     description: "Complete brand identity design for a sustainable technology startup, including logo, color palette, and brand guidelines.",
     image: "/api/placeholder/600/400",
     tags: ["Logo Design", "Brand Guidelines", "Color Palette"],
-    link: "/portfolio/ecotech-brand",
+    link: "/projects/ecotech-brand",
     featured: true
   },
   {
@@ -23,7 +23,7 @@ const portfolioItems = [
     description: "Complete print campaign design for a fashion brand including posters, flyers, and marketing materials.",
     image: "/api/placeholder/600/400",
     tags: ["Print Design", "Campaign", "Marketing"],
-    link: "/portfolio/fashion-campaign",
+    link: "/projects/fashion-campaign",
     featured: true
   },
   {
@@ -33,7 +33,7 @@ const portfolioItems = [
     description: "Elegant menu design for a fine dining restaurant with custom illustrations and typography.",
     image: "/api/placeholder/600/400",
     tags: ["Print Design", "Typography", "Illustration"],
-    link: "/portfolio/restaurant-menu",
+    link: "/projects/restaurant-menu",
     featured: false
   },
   {
@@ -43,7 +43,7 @@ const portfolioItems = [
     description: "Mobile app design for a fitness tracking application with intuitive user interface and engaging visuals.",
     image: "/api/placeholder/600/400",
     tags: ["Mobile UI", "App Design", "User Experience"],
-    link: "/portfolio/fitness-app",
+    link: "/projects/fitness-app",
     featured: true
   },
   {
@@ -53,7 +53,7 @@ const portfolioItems = [
     description: "Complete branding package for a local coffee shop including logo, packaging, and marketing materials.",
     image: "/api/placeholder/600/400",
     tags: ["Branding", "Packaging", "Marketing"],
-    link: "/portfolio/coffee-shop",
+    link: "/projects/coffee-shop",
     featured: false
   },
   {
@@ -63,7 +63,7 @@ const portfolioItems = [
     description: "Complete brand identity design for a technology startup with modern aesthetics and clear messaging.",
     image: "/api/placeholder/600/400",
     tags: ["Corporate", "Branding", "Technology"],
-    link: "/portfolio/tech-startup",
+    link: "/projects/tech-startup",
     featured: false
   },
   {
@@ -73,7 +73,7 @@ const portfolioItems = [
     description: "Book cover design for a fantasy novel with custom illustration and typography.",
     image: "/api/placeholder/600/400",
     tags: ["Book Design", "Illustration", "Typography"],
-    link: "/portfolio/book-cover",
+    link: "/projects/book-cover",
     featured: false
   },
   {
@@ -83,7 +83,7 @@ const portfolioItems = [
     description: "Social media campaign design with consistent branding across multiple platforms.",
     image: "/api/placeholder/600/400",
     tags: ["Social Media", "Campaign", "Branding"],
-    link: "/portfolio/social-campaign",
+    link: "/projects/social-campaign",
     featured: false
   },
   {
@@ -93,7 +93,7 @@ const portfolioItems = [
     description: "Professional product photography for an e-commerce brand with clean, modern aesthetics.",
     image: "/api/placeholder/600/400",
     tags: ["Photography", "Product", "E-commerce"],
-    link: "/portfolio/product-photography",
+    link: "/projects/product-photography",
     featured: false
   }
 ]

@@ -14,40 +14,57 @@ import Link from "next/link"
 const services = [
   {
     icon: Palette,
-    title: "Brand Identity",
-    description: "Complete brand identity design including logo, color palette, typography, and brand guidelines.",
-    features: ["Logo Design", "Brand Guidelines", "Color Palette", "Typography"]
+    title: "Brand Identity Design & Strategy",
+    description: "Building cohesive, strategic, and timeless brand systems that truly represent your vision.",
+    features: ["Logo Design", "Brand Guidelines", "Color Systems", "Typography"]
   },
   {
     icon: FileText,
-    title: "Print Design",
-    description: "Professional print materials including business cards, brochures, posters, and marketing materials.",
-    features: ["Business Cards", "Brochures", "Posters", "Marketing Materials"]
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile Design",
-    description: "Mobile-first design approach for apps and mobile websites with intuitive user interfaces.",
-    features: ["App Design", "Mobile UI", "User Interface", "Mobile UX"]
-  },
-  {
-    icon: Camera,
-    title: "Photography",
-    description: "Professional photography services for product shots, portraits, and marketing imagery.",
-    features: ["Product Photography", "Portraits", "Event Photography", "Marketing Images"]
+    title: "Visual Communication & Collateral Design",
+    description: "Designing high-impact pitch decks, magazines, brochures, and print materials that speak with elegance and intention.",
+    features: ["Pitch Decks", "Magazines", "Brochures", "Print Materials"]
   },
   {
     icon: PenTool,
-    title: "Illustration",
-    description: "Custom illustrations and graphics that bring your ideas to life with artistic flair.",
-    features: ["Custom Illustrations", "Digital Art", "Vector Graphics", "Icon Design"]
+    title: "Brand Strategy & Positioning",
+    description: "Helping brands find and own their unique voice in the marketplace.",
+    features: ["Brand Voice", "Market Positioning", "Strategic Planning", "Brand Messaging"]
+  },
+  {
+    icon: Smartphone,
+    title: "Motion & Digital Design",
+    description: "Translating brand stories into dynamic, captivating visuals that engage and inspire.",
+    features: ["Motion Graphics", "Digital Assets", "Video Design", "Animations"]
+  },
+  {
+    icon: Camera,
+    title: "Social Media Design & Strategy",
+    description: "Shaping visual narratives that enhance your brand presence and community engagement.",
+    features: ["Social Graphics", "Content Strategy", "Brand Consistency", "Community Engagement"]
   }
 ]
 
 export function ServicesSection() {
   return (
-    <section className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <div 
+          className="w-full h-full"
+          style={{
+            backgroundImage: "url('/assets/featured.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat"
+          }}
+        />
+      </div>
+      
+      {/* Color Overlay */}
+      <div className="absolute inset-0 bg-background/95" />
+      <div className="absolute inset-0 bg-black/20" />
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,8 +76,8 @@ export function ServicesSection() {
             <span className="text-gradient">Creative Services</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I offer a comprehensive range of design services to help your brand stand out 
-            and make a lasting impression on your audience.
+            We offer a full suite of design and brand communication services, tailored to help 
+            businesses tell their stories beautifully and strategically.
           </p>
         </motion.div>
 
