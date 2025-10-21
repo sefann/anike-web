@@ -8,7 +8,7 @@ import Link from "next/link"
 const pricingPlans = [
   {
     name: "Starter",
-    price: "$500",
+    price: "$100",
     description: "Perfect for small projects and startups",
     features: [
       "Logo Design (2 concepts)",
@@ -22,7 +22,7 @@ const pricingPlans = [
   },
   {
     name: "Professional",
-    price: "$1,500",
+    price: "$250",
     description: "Ideal for growing businesses",
     features: [
       "Complete Brand Identity",
@@ -38,7 +38,7 @@ const pricingPlans = [
   },
   {
     name: "Enterprise",
-    price: "$3,000",
+    price: "$500",
     description: "For established companies and agencies",
     features: [
       "Full Brand Identity Package",
@@ -51,7 +51,8 @@ const pricingPlans = [
       "Dedicated Project Manager",
       "Ongoing Support"
     ],
-    popular: false
+    popular: false,
+    custom: false
   }
 ]
 

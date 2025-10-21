@@ -1,17 +1,33 @@
 "use client"
 
-import { motion, AnimatePresence } from "framer-motion"
-import { useState } from "react"
-import { ChevronDown, ChevronUp, ExternalLink, Calendar, MapPin, Building } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion"
+import { Calendar, MapPin, Building, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import { projects } from "@/data/projects-data"
+import { useState } from "react"
 
 export function BrandProjectsGrid() {
-  const [expandedProject, setExpandedProject] = useState<string | null>(null)
-
-  const toggleExpanded = (projectId: string) => {
-    setExpandedProject(expandedProject === projectId ? null : projectId)
+  // Split projects: first 5 are large, rest are small
+  const largeProjects = projects.slice(0, 5)
+  const smallProjects = projects.slice(5)
+  
+  // State for image navigation
+  const [currentImageIndex, setCurrentImageIndex] = useState<{[key: string]: number}>({})
+  
+  const getCurrentImageIndex = (projectId: string) => currentImageIndex[projectId] || 0
+  
+  const nextImage = (projectId: string, totalImages: number) => {
+    setCurrentImageIndex(prev => ({
+      ...prev,
+      [projectId]: ((prev[projectId] || 0) + 1) % totalImages
+    }))
+  }
+  
+  const prevImage = (projectId: string, totalImages: number) => {
+    setCurrentImageIndex(prev => ({
+      ...prev,
+      [projectId]: ((prev[projectId] || 0) - 1 + totalImages) % totalImages
+    }))
   }
 
   return (
@@ -49,8 +65,141 @@ export function BrandProjectsGrid() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+        {/* Large Projects */}
+        <div className="space-y-16 mb-16">
+          {largeProjects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-background border border-border rounded-2xl overflow-hidden shadow-xl"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                {/* Left Side - Content */}
+                <div className="p-8 lg:p-12">
+                  <div className="space-y-6">
+                    {/* Project Header */}
+                    <div className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <Image
+                          src={project.logo}
+                          alt={`${project.title} Logo`}
+                          width={80}
+                          height={80}
+                          className="object-contain"
+                        />
+                        <div>
+                          <h3 className="text-2xl font-bold">{project.title}</h3>
+                          <p className="text-primary font-medium">{project.client}</p>
+                        </div>
+                      </div>
+
+                      {/* Project Meta */}
+                      <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                        <div className="flex items-center space-x-2">
+                          <Building className="h-4 w-4" />
+                          <span>{project.sector}</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <MapPin className="h-4 w-4" />
+                          <span>{project.country}</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <Calendar className="h-4 w-4" />
+                          <span>{project.year}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Project Description */}
+                    <div className="space-y-4">
+                      <p className="text-muted-foreground leading-relaxed">
+                        {project.description}
+                      </p>
+                      
+                      <div>
+                        <h4 className="font-semibold mb-2 text-primary">Project Brief</h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {project.brief}
+                        </p>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold mb-2 text-primary">Our Approach</h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {project.approach}
+                        </p>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold mb-2 text-primary">The Result</h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {project.result}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Scope of Work */}
+                    <div>
+                      <h4 className="font-semibold mb-2 text-primary">Scope of Work</h4>
+                      <p className="text-sm text-muted-foreground">{project.scope}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Side - Images Grid */}
+                <div className="p-8 lg:p-12 bg-muted/30">
+                  <h4 className="font-semibold mb-6 text-primary">Project Gallery</h4>
+                  <div className="relative">
+                    <div className="grid grid-cols-2 gap-4">
+                      {project.images.slice(0, 6).map((image, imgIndex) => {
+                        const actualIndex = (getCurrentImageIndex(project.id) + imgIndex) % project.images.length
+                        return (
+                          <div key={imgIndex} className="aspect-square relative rounded-lg overflow-hidden bg-muted/50 group">
+                            <Image
+                              src={project.images[actualIndex]}
+                              alt={`${project.title} - Image ${actualIndex + 1}`}
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-300"
+                              sizes="(max-width: 768px) 50vw, 25vw"
+                            />
+                          </div>
+                        )
+                      })}
+                    </div>
+                    
+                    {/* Navigation Arrows */}
+                    {project.images.length > 6 && (
+                      <div className="flex justify-center items-center mt-4 space-x-4">
+                        <button
+                          onClick={() => prevImage(project.id, project.images.length)}
+                          className="p-2 rounded-full bg-background border border-border hover:bg-primary hover:text-primary-foreground transition-colors"
+                        >
+                          <ChevronLeft className="h-4 w-4" />
+                        </button>
+                        <span className="text-sm text-muted-foreground">
+                          {getCurrentImageIndex(project.id) + 1} - {Math.min(getCurrentImageIndex(project.id) + 6, project.images.length)} of {project.images.length}
+                        </span>
+                        <button
+                          onClick={() => nextImage(project.id, project.images.length)}
+                          className="p-2 rounded-full bg-background border border-border hover:bg-primary hover:text-primary-foreground transition-colors"
+                        >
+                          <ChevronRight className="h-4 w-4" />
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Small Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {smallProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
@@ -59,136 +208,50 @@ export function BrandProjectsGrid() {
               viewport={{ once: true }}
               className="bg-background border border-border rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              {/* Project Card Header */}
-              <div className="p-6">
-                {/* Logo Placeholder */}
-                <div className="w-16 h-16 bg-muted/50 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                  <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">
-                      {project.title.split(' ').map(word => word[0]).join('').slice(0, 2)}
-                    </span>
+              {/* Project Image */}
+              <div className="aspect-video relative">
+                <Image
+                  src={project.images[0]}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <Image
+                      src={project.logo}
+                      alt={`${project.title} Logo`}
+                      width={48}
+                      height={48}
+                      className="object-contain"
+                    />
+                    <span className="text-white text-sm font-medium">{project.client}</span>
                   </div>
                 </div>
-
-                {/* Project Title */}
-                <h3 className="text-xl font-semibold mb-2 text-center">{project.title}</h3>
-                
-                {/* Project Meta */}
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
-                    <Building className="h-4 w-4" />
-                    <span>{project.client}</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
-                    <MapPin className="h-4 w-4" />
-                    <span>{project.country}</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
-                    <Calendar className="h-4 w-4" />
-                    <span>{project.year}</span>
-                  </div>
-                </div>
-
-                {/* Brief Description */}
-                <p className="text-sm text-muted-foreground text-center mb-4 line-clamp-3">
-                  {project.description}
-                </p>
-
-                {/* Sector Badge */}
-                <div className="flex justify-center mb-4">
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
-                    {project.sector}
-                  </span>
-                </div>
-
-                {/* Expand Button */}
-                <Button
-                  onClick={() => toggleExpanded(project.id)}
-                  variant="outline"
-                  size="sm"
-                  className="w-full"
-                >
-                  {expandedProject === project.id ? (
-                    <>
-                      <ChevronUp className="mr-2 h-4 w-4" />
-                      Show Less
-                    </>
-                  ) : (
-                    <>
-                      <ChevronDown className="mr-2 h-4 w-4" />
-                      Read More
-                    </>
-                  )}
-                </Button>
               </div>
 
-              {/* Expanded Content */}
-              <AnimatePresence>
-                {expandedProject === project.id && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="border-t border-border"
-                  >
-                    <div className="p-6 space-y-6">
-                      {/* Project Details */}
-                      <div className="space-y-4">
-                        <div>
-                          <h4 className="font-semibold mb-2 text-primary">Project Brief</h4>
-                          <p className="text-sm text-muted-foreground leading-relaxed">
-                            {project.brief}
-                          </p>
-                        </div>
+              {/* Project Content */}
+              <div className="p-6">
+                <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+                <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                  {project.description}
+                </p>
+                
+                <div className="flex items-center justify-between text-xs text-muted-foreground mb-4">
+                  <span>{project.sector}</span>
+                  <span>{project.year}</span>
+                </div>
 
-                        <div>
-                          <h4 className="font-semibold mb-2 text-primary">Our Approach</h4>
-                          <p className="text-sm text-muted-foreground leading-relaxed">
-                            {project.approach}
-                          </p>
-                        </div>
-
-                        <div>
-                          <h4 className="font-semibold mb-2 text-primary">The Result</h4>
-                          <p className="text-sm text-muted-foreground leading-relaxed">
-                            {project.result}
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* Project Images */}
-                      <div>
-                        <h4 className="font-semibold mb-4 text-primary">Project Gallery</h4>
-                        <div className="grid grid-cols-2 gap-3">
-                          {project.images.slice(0, 4).map((image, imgIndex) => (
-                            <div key={imgIndex} className="aspect-square relative rounded-lg overflow-hidden bg-muted/50">
-                              <Image
-                                src={image}
-                                alt={`${project.title} - Image ${imgIndex + 1}`}
-                                fill
-                                className="object-cover hover:scale-105 transition-transform duration-300"
-                                sizes="(max-width: 768px) 50vw, 25vw"
-                              />
-                            </div>
-                          ))}
-                        </div>
-                        {project.images.length > 4 && (
-                          <p className="text-xs text-muted-foreground mt-2 text-center">
-                            +{project.images.length - 4} more images
-                          </p>
-                        )}
-                      </div>
-
-                      {/* Scope of Work */}
-                      <div>
-                        <h4 className="font-semibold mb-2 text-primary">Scope of Work</h4>
-                        <p className="text-sm text-muted-foreground">{project.scope}</p>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-muted-foreground">{project.country}</span>
+                  <div className="flex items-center space-x-1 text-primary">
+                    <span className="text-xs">View Project</span>
+                    <ExternalLink className="h-3 w-3" />
+                  </div>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

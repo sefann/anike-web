@@ -7,31 +7,31 @@ import Link from "next/link"
 
 const featuredProjects = [
   {
-    id: 1,
-    title: "EcoTech Brand Identity",
-    category: "Brand Identity",
-    description: "Complete brand identity design for a sustainable technology startup, including logo, color palette, and brand guidelines.",
-    image: "/api/placeholder/600/400",
-    tags: ["Logo Design", "Brand Guidelines", "Color Palette"],
-    link: "/projects/ecotech-brand"
+    id: "creamy-crumbles",
+    title: "Creamy Crumbles",
+    category: "Confectionary",
+    description: "Brand identity for one of Lagos State's foremost luxury cake brands, specializing in luxurious wedding cakes and children's birthday cakes.",
+    image: "/Brand identities/CREAMY CRUMBLES- 2025/CCRUMBLES-01.png",
+    tags: ["Logo Design", "Brand Identity", "Confectionary"],
+    link: "/projects/creamy-crumbles"
   },
   {
-    id: 2,
-    title: "Fashion Brand Campaign",
-    category: "Print Design",
-    description: "Complete print campaign design for a fashion brand including posters, flyers, and marketing materials.",
-    image: "/api/placeholder/600/400",
-    tags: ["Print Design", "Campaign", "Marketing"],
-    link: "/projects/fashion-campaign"
+    id: "jri",
+    title: "Justice Research Institute",
+    category: "Justice",
+    description: "Brand identity for a public-private think tank dedicated to strengthening governance and advancing legal reforms across Nigeria and West Africa.",
+    image: "/Brand identities/JRI - 2025/JRI-01.png",
+    tags: ["Brand Refresh", "Visual Identity", "Justice"],
+    link: "/projects/jri"
   },
   {
-    id: 3,
-    title: "Restaurant Menu Design",
-    category: "Print Design",
-    description: "Elegant menu design for a fine dining restaurant with custom illustrations and typography.",
-    image: "/api/placeholder/600/400",
-    tags: ["Print Design", "Typography", "Illustration"],
-    link: "/projects/restaurant-menu"
+    id: "mc-obed",
+    title: "MC Obed",
+    category: "Entertainment",
+    description: "Brand identity for a Master of Ceremonies that delivers lively and professional hosting experiences across all kinds of events.",
+    image: "/Brand identities/MC OBED - 2024/mc obed1.png",
+    tags: ["Logo Design", "Entertainment", "MC"],
+    link: "/projects/mc-obed"
   }
 ]
 
@@ -85,7 +85,11 @@ export function FeaturedWorkSection() {
             >
               <div className="relative overflow-hidden">
                 <div className="aspect-[4/3] bg-muted/50 flex items-center justify-center">
-                  <div className="text-muted-foreground text-sm">Project Image</div>
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <Button asChild size="sm" variant="secondary">

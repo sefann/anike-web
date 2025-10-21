@@ -31,18 +31,18 @@ export const projects: Project[] = [
     approach: "When the ICLF team shared the vision, we knew the branding had to go beyond recognition, it needed to feel like a movement of light and hope. Our approach was to translate that spirit into visuals that radiate warmth, unity, and motion.",
     result: "For the brand identity, we used the visuals to reflect how each young person's story contributes to a brighter Nigeria. The end result is a visual system that feels alive, warm, and Nigerian celebrating youth, resilience, and transformation.",
     images: [
-      "/Brand identities/30 POL -2024/30 POL LOGO-B.png",
       "/Brand identities/30 POL -2024/30 POL LOGO-T-08.png",
-      "/Brand identities/30 POL -2024/30poll-01.png",
-      "/Brand identities/30 POL -2024/30poll-02.png",
-      "/Brand identities/30 POL -2024/30poll-03.png",
-      "/Brand identities/30 POL -2024/30poll-04.png",
-      "/Brand identities/30 POL -2024/30poll-05.png",
-      "/Brand identities/30 POL -2024/30poll-06.png",
-      "/Brand identities/30 POL -2024/30poll-07.png",
-      "/Brand identities/30 POL -2024/30poll-08.png"
+      "/Brand identities/30 POL -2024/plo4.png",
+      "/Brand identities/30 POL -2024/pol1.png",
+      "/Brand identities/30 POL -2024/pol2.png",
+      "/Brand identities/30 POL -2024/pol3.png",
+      "/Brand identities/30 POL -2024/pol5.png",
+      "/Brand identities/30 POL -2024/pol6.png",
+      "/Brand identities/30 POL -2024/pol7.png",
+      "/Brand identities/30 POL -2024/pol8.png",
+      "/Brand identities/30 POL -2024/pol9.png"
     ],
-    logo: "/Brand identities/30 POL -2024/30 POL LOGO-B.png",
+    logo: "/Brand identities/30 POL -2024/30 POL LOGO-T-08.png",
     featured: true
   },
   {
@@ -178,7 +178,7 @@ export const projects: Project[] = [
       "/Brand identities/JRI - 2025/JRI-08.png",
       "/Brand identities/JRI - 2025/JRI-09.png"
     ],
-    logo: "/Brand identities/JRI - 2025/JRI LOGO-B.png",
+    logo: "/Brand identities/JRI - 2025/JRI LOGO-B.jpg",
     featured: false
   },
   {
@@ -194,20 +194,17 @@ export const projects: Project[] = [
     approach: "Our aim was to visually express a balance where culture meets charisma. The icon combines a microphone head with a traditional Yoruba cap 'Fila', symbolizing both authority on stage and a connection to heritage.",
     result: "The microphone represents MC OBED's voice and presence, his ability to engage, entertain, and command attention, while the Yoruba cap adds warmth, identity, and a sense of cultural pride. Merged together, we created a distinctive and meaningful mark that celebrates tradition within modern entertainment.",
     images: [
-      "/Brand identities/MC OBED - 2024/MC OBED LOGO-B.png",
-      "/Brand identities/MC OBED - 2024/MC OBED LOGO-T.png",
-      "/Brand identities/MC OBED - 2024/MC OBED-01.png",
-      "/Brand identities/MC OBED - 2024/MC OBED-02.png",
-      "/Brand identities/MC OBED - 2024/MC OBED-03.png",
-      "/Brand identities/MC OBED - 2024/MC OBED-04.png",
-      "/Brand identities/MC OBED - 2024/MC OBED-05.png",
-      "/Brand identities/MC OBED - 2024/MC OBED-06.png",
-      "/Brand identities/MC OBED - 2024/MC OBED-07.png",
-      "/Brand identities/MC OBED - 2024/MC OBED-08.png",
-      "/Brand identities/MC OBED - 2024/MC OBED-09.png",
-      "/Brand identities/MC OBED - 2024/MC OBED-10.png"
+      "/Brand identities/MC OBED - 2024/mc obed1.png",
+      "/Brand identities/MC OBED - 2024/mc obed2.png",
+      "/Brand identities/MC OBED - 2024/mc obed3.png",
+      "/Brand identities/MC OBED - 2024/mc obed4.png",
+      "/Brand identities/MC OBED - 2024/mc obed5.png",
+      "/Brand identities/MC OBED - 2024/mc obed6.png",
+      "/Brand identities/MC OBED - 2024/mc obed7.png",
+      "/Brand identities/MC OBED - 2024/mc obed8.png",
+      "/Brand identities/MC OBED - 2024/omc.png"
     ],
-    logo: "/Brand identities/MC OBED - 2024/MC OBED LOGO-B.png",
+    logo: "/Brand identities/MC OBED - 2024/mc obed1.png",
     featured: false
   },
   {
@@ -225,17 +222,14 @@ export const projects: Project[] = [
     images: [
       "/Brand identities/SALLYZ - 2024/SALLYZ LOGO-B.png",
       "/Brand identities/SALLYZ - 2024/SALLYZ LOGO-T.png",
-      "/Brand identities/SALLYZ - 2024/SALLYZ-01.png",
-      "/Brand identities/SALLYZ - 2024/SALLYZ-02.png",
-      "/Brand identities/SALLYZ - 2024/SALLYZ-03.png",
-      "/Brand identities/SALLYZ - 2024/SALLYZ-04.png",
-      "/Brand identities/SALLYZ - 2024/SALLYZ-05.png",
-      "/Brand identities/SALLYZ - 2024/SALLYZ-06.png",
-      "/Brand identities/SALLYZ - 2024/SALLYZ-07.png",
-      "/Brand identities/SALLYZ - 2024/SALLYZ-08.png",
-      "/Brand identities/SALLYZ - 2024/SALLYZ-09.png",
-      "/Brand identities/SALLYZ - 2024/SALLYZ-10.png",
-      "/Brand identities/SALLYZ - 2024/SALLYZ-11.png"
+      "/Brand identities/SALLYZ - 2024/SALLYZ POSTING-01.png",
+      "/Brand identities/SALLYZ - 2024/SALLYZ POSTING-02.jpg",
+      "/Brand identities/SALLYZ - 2024/SALLYZ POSTING-03.jpg",
+      "/Brand identities/SALLYZ - 2024/SALLYZ POSTING-04.jpg",
+      "/Brand identities/SALLYZ - 2024/SALLYZ POSTING-05.jpg",
+      "/Brand identities/SALLYZ - 2024/SALLYZ POSTING-06.png",
+      "/Brand identities/SALLYZ - 2024/SALLYZ POSTING-07.jpg",
+      "/Brand identities/SALLYZ - 2024/SALLYZ POSTING-08.jpg"
     ],
     logo: "/Brand identities/SALLYZ - 2024/SALLYZ LOGO-B.png",
     featured: false
@@ -253,8 +247,8 @@ export const projects: Project[] = [
     approach: "For the logo, we aimed to capture the heart of transformation and fruitfulness in Christ. A symbol that reflects the heart of the ministry: reaching the lost and nurturing lives into fruitfulness in Christ. To do this, we used an apple to represent fruitfulness.",
     result: "Embedded within the apple are the letters T, G, and E, merged to form a unified symbol. This subtle integration ties the brand name to its spiritual message, that everything begins and ends in Christ.",
     images: [
-      "/Brand identities/TGE - 2025/TGE LOGO-B.png",
-      "/Brand identities/TGE - 2025/TGE LOGO-T.png",
+      "/Brand identities/TGE - 2025/TGE LOGOS-B.png",
+      "/Brand identities/TGE - 2025/TGE LOGOS-T.png",
       "/Brand identities/TGE - 2025/TGE-01.png",
       "/Brand identities/TGE - 2025/TGE-02.png",
       "/Brand identities/TGE - 2025/TGE-03.png",
@@ -262,11 +256,9 @@ export const projects: Project[] = [
       "/Brand identities/TGE - 2025/TGE-05.png",
       "/Brand identities/TGE - 2025/TGE-06.png",
       "/Brand identities/TGE - 2025/TGE-07.png",
-      "/Brand identities/TGE - 2025/TGE-08.png",
-      "/Brand identities/TGE - 2025/TGE-09.png",
-      "/Brand identities/TGE - 2025/TGE-10.png"
+      "/Brand identities/TGE - 2025/TGE-08.png"
     ],
-    logo: "/Brand identities/TGE - 2025/TGE LOGO-B.png",
+    logo: "/Brand identities/TGE - 2025/TGE LOGOS-B.png",
     featured: false
   },
   {
@@ -282,21 +274,19 @@ export const projects: Project[] = [
     approach: "The logo identity was designed to reflect the confidence, structure, and sophistication, that Salem exudes. The pink outline, inspired by architectural blueprints, frames the wordmark as a window into elevated living experiences.",
     result: "Every element of the design from the clean lines to the vibrant hue captures TREC's modern elegance and premium positioning in the real estate space.",
     images: [
-      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC LOGO-B.png",
-      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC LOGO-T.png",
-      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC-01.png",
-      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC-02.png",
-      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC-03.png",
-      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC-04.png",
-      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC-05.png",
-      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC-06.png",
-      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC-07.png",
-      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC-08.png",
-      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC-09.png",
-      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC-10.png",
-      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC-11.png"
+      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC LOGOS-02.png",
+      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC P-01.png",
+      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC P-02.png",
+      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC P-03.png",
+      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC P-04.png",
+      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC P-05.png",
+      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC P-06.png",
+      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC P-07.png",
+      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC P-08.png",
+      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC PROFILE PICS-10.jpg",
+      "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC PROFILE PICS-11.jpg"
     ],
-    logo: "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC LOGO-B.png",
+    logo: "/Brand identities/THE REAL ESTATE CHIC - 2025/TREC LOGOS-02.png",
     featured: true
   },
   {
