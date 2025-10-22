@@ -9,9 +9,9 @@ import { projects } from "@/data/projects-data"
 // Projects are now imported from data file
 
 export function ProjectsGrid() {
-  const [expandedId, setExpandedId] = useState<number | null>(null)
+  const [expandedId, setExpandedId] = useState<string | null>(null)
 
-  const toggleExpand = (id: number) => {
+  const toggleExpand = (id: string) => {
     setExpandedId(expandedId === id ? null : id)
   }
 
@@ -37,18 +37,18 @@ export function ProjectsGrid() {
                     <div className="flex-1">
                       <div className="flex items-center space-x-2 mb-2">
                         <span className="text-xs font-medium text-primary px-2 py-1 bg-primary/10 rounded-full">
-                          {project.category}
+                          {project.sector}
                         </span>
                         <span className="text-xs text-muted-foreground">{project.year}</span>
                       </div>
-                      <h3 className="text-2xl font-bold mb-1">{project.name}</h3>
-                      <p className="text-sm text-primary font-medium mb-3">{project.tagline}</p>
+                      <h3 className="text-2xl font-bold mb-1">{project.title}</h3>
+                      <p className="text-sm text-primary font-medium mb-3">{project.client}</p>
                     </div>
                   </div>
 
                   {/* Brief Description */}
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                    {project.briefDescription}
+                    {project.description}
                   </p>
 
                   {/* Expand Button */}
@@ -81,7 +81,7 @@ export function ProjectsGrid() {
                         <div className="mb-6">
                           <h4 className="text-lg font-semibold mb-3">Project Overview</h4>
                           <p className="text-muted-foreground leading-relaxed">
-                            {project.fullDescription}
+                            {project.brief}
                           </p>
                         </div>
 
@@ -89,14 +89,9 @@ export function ProjectsGrid() {
                         <div className="mb-6">
                           <h4 className="text-lg font-semibold mb-3">Services Provided</h4>
                           <div className="flex flex-wrap gap-2">
-                            {project.services.map((service) => (
-                              <span
-                                key={service}
-                                className="px-3 py-1 bg-background border border-border rounded-full text-sm"
-                              >
-                                {service}
-                              </span>
-                            ))}
+                            <span className="px-3 py-1 bg-background border border-border rounded-full text-sm">
+                              {project.scope}
+                            </span>
                           </div>
                         </div>
 
@@ -104,17 +99,17 @@ export function ProjectsGrid() {
                         <div>
                           <h4 className="text-lg font-semibold mb-3">Brand Materials</h4>
                           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            {project.images.map((image) => (
+                            {project.images.map((image, index) => (
                               <div
-                                key={image.id}
+                                key={index}
                                 className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center border border-border overflow-hidden"
                               >
                                 <div className="text-center text-muted-foreground p-4">
                                   <div className="w-12 h-12 bg-gradient-primary rounded-lg mx-auto mb-2 flex items-center justify-center">
                                     <ExternalLink className="h-6 w-6 text-white" />
                                   </div>
-                                  <p className="text-xs font-medium">{image.title}</p>
-                                  <p className="text-xs mt-1 capitalize">{image.type}</p>
+                                  <p className="text-xs font-medium">Brand Material</p>
+                                  <p className="text-xs mt-1 capitalize">Image</p>
                                 </div>
                               </div>
                             ))}

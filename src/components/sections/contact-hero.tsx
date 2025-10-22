@@ -1,9 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, MessageCircle, Clock } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+// Removed unused imports
 import Image from "next/image"
 
 export function ContactHero() {

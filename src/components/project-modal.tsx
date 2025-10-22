@@ -2,7 +2,7 @@
 
 import React from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { X, ExternalLink } from "lucide-react"
+import { X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { Project } from "@/data/projects-data"

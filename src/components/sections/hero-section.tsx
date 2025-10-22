@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowRight, Sparkles, ChevronLeft, ChevronRight, Linkedin } from "lucide-react"
+import { ChevronLeft, ChevronRight, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"

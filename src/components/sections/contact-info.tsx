@@ -13,8 +13,7 @@ import {
   Instagram,
   Twitter
 } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+// Removed unused imports
 import { companyInfo } from "@/data/company-info"
 
 const contactMethods = [

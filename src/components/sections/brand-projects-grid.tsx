@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Calendar, MapPin, Building, ExternalLink, ChevronLeft, ChevronRight, Eye } from "lucide-react"
+import { Calendar, MapPin, Building, ChevronLeft, ChevronRight, Eye } from "lucide-react"
 import Image from "next/image"
 import { projects, Project } from "@/data/projects-data"
 import { useState } from "react"
