@@ -36,18 +36,29 @@ export function ContactForm() {
     setIsSubmitting(true)
     
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      setSubmitStatus("success")
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        service: "",
-        budget: "",
-        message: ""
+      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
       })
-    } catch {
+      
+      if (response.ok) {
+        setSubmitStatus("success")
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          service: "",
+          budget: "",
+          message: ""
+        })
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
       setSubmitStatus("error")
     } finally {
       setIsSubmitting(false)
@@ -91,7 +102,12 @@ export function ContactForm() {
         </motion.div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form 
+        action="https://formspree.io/f/YOUR_FORM_ID" 
+        method="POST" 
+        onSubmit={handleSubmit} 
+        className="space-y-6"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-2">
