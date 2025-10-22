@@ -91,14 +91,7 @@ export function FeaturedWorkSection() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Button asChild size="sm" variant="secondary">
-                    <Link href={project.link}>
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      View Project
-                    </Link>
-                  </Button>
-                </div>
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               
               <div className="p-6">
@@ -124,7 +117,7 @@ export function FeaturedWorkSection() {
                 </div>
                 
                 <Link
-                  href={project.link}
+                  href="/projects"
                   className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
                 >
                   Learn More

@@ -78,7 +78,7 @@ export function AboutBio() {
               {/* Profile Image */}
               <div className="aspect-square w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/anike photos/anikesix.png"
+                  src="/anike photos/aniketwo.PNG"
                   alt="Olamide Fatosin - AnikeBrands Founder"
                   width={400}
                   height={400}

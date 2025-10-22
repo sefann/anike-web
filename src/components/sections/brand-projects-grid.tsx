@@ -1,10 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Calendar, MapPin, Building, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react"
+import { Calendar, MapPin, Building, ExternalLink, ChevronLeft, ChevronRight, Eye } from "lucide-react"
 import Image from "next/image"
-import { projects } from "@/data/projects-data"
+import { projects, Project } from "@/data/projects-data"
 import { useState } from "react"
+import { ProjectModal } from "@/components/project-modal"
+import { PlaceholderImage } from "@/components/placeholder-image"
 
 export function BrandProjectsGrid() {
   // Split projects: first 5 are large, rest are small
@@ -13,6 +15,10 @@ export function BrandProjectsGrid() {
   
   // State for image navigation
   const [currentImageIndex, setCurrentImageIndex] = useState<{[key: string]: number}>({})
+  
+  // State for modal
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
   
   const getCurrentImageIndex = (projectId: string) => currentImageIndex[projectId] || 0
   
@@ -28,6 +34,16 @@ export function BrandProjectsGrid() {
       ...prev,
       [projectId]: ((prev[projectId] || 0) - 1 + totalImages) % totalImages
     }))
+  }
+
+  const handleProjectClick = (project: Project) => {
+    setSelectedProject(project)
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+    setSelectedProject(null)
   }
 
   return (
@@ -206,11 +222,16 @@ export function BrandProjectsGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-background border border-border rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+              className="group bg-background border border-border rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                handleProjectClick(project)
+              }}
             >
               {/* Project Image */}
               <div className="aspect-video relative">
-                <Image
+                <PlaceholderImage
                   src={project.images[0]}
                   alt={project.title}
                   fill
@@ -218,9 +239,15 @@ export function BrandProjectsGrid() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="flex items-center space-x-2 text-white">
+                    <Eye className="h-4 w-4" />
+                    <span className="text-sm font-medium">View Project</span>
+                  </div>
+                </div>
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="flex items-center space-x-2 mb-2">
-                    <Image
+                    <PlaceholderImage
                       src={project.logo}
                       alt={`${project.title} Logo`}
                       width={48}
@@ -246,9 +273,9 @@ export function BrandProjectsGrid() {
 
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-muted-foreground">{project.country}</span>
-                  <div className="flex items-center space-x-1 text-primary">
+                  <div className="flex items-center space-x-1 text-primary group-hover:text-primary/80 transition-colors">
                     <span className="text-xs">View Project</span>
-                    <ExternalLink className="h-3 w-3" />
+                    <Eye className="h-3 w-3" />
                   </div>
                 </div>
               </div>
@@ -280,6 +307,14 @@ export function BrandProjectsGrid() {
           </div>
         </motion.div>
       </div>
+
+      {/* Project Modal */}
+      <ProjectModal
+        key={selectedProject?.id || 'modal'}
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </section>
   )
 }

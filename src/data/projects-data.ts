@@ -150,7 +150,7 @@ export const projects: Project[] = [
       "/Brand identities/HEBRON AND SAGE - 2025/H&S-07.png",
       "/Brand identities/HEBRON AND SAGE - 2025/H&S-08.png"
     ],
-    logo: "/Brand identities/HEBRON AND SAGE - 2025/H&S LOGO-B.png",
+    logo: "/Brand identities/HEBRON AND SAGE - 2025/H&S LOGO-B.jpg",
     featured: true
   },
   {
@@ -166,7 +166,7 @@ export const projects: Project[] = [
     approach: "Our approach was to create a refined monogram that visually captures the institute's role as a bridge between justice and research. The letters 'J' and 'R' are merged, while the negative space forms the 'I', framed by two parallel lines for structure and balance.",
     result: "This integration symbolizes collaboration and clarity where justice and research meet to form one unified purpose. The result is a symbol of purpose and authority, modern, balanced, and deeply aligned with JRI's mission to drive reform and innovation in the justice sector.",
     images: [
-      "/Brand identities/JRI - 2025/JRI LOGO-B.png",
+      "/Brand identities/JRI - 2025/JRI LOGO-B.jpg",
       "/Brand identities/JRI - 2025/JRI LOGO-T.png",
       "/Brand identities/JRI - 2025/JRI-01.png",
       "/Brand identities/JRI - 2025/JRI-02.png",
@@ -175,8 +175,7 @@ export const projects: Project[] = [
       "/Brand identities/JRI - 2025/JRI-05.png",
       "/Brand identities/JRI - 2025/JRI-06.png",
       "/Brand identities/JRI - 2025/JRI-07.png",
-      "/Brand identities/JRI - 2025/JRI-08.png",
-      "/Brand identities/JRI - 2025/JRI-09.png"
+      "/Brand identities/JRI - 2025/JRI-08.png"
     ],
     logo: "/Brand identities/JRI - 2025/JRI LOGO-B.jpg",
     featured: false

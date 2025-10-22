@@ -11,25 +11,25 @@ import { companyInfo } from "@/data/company-info"
 const heroImages = [
   {
     id: 1,
-    src: "/anike photos/anikeone.png",
+    src: "/anike photos/anikefive.JPG",
     alt: "Olamide Fatosin - AnikeBrands Designer",
     title: "Brand Identity Designer"
   },
   {
     id: 2,
-    src: "/anike photos/anikethree.PNG",
+    src: "/anike photos/anikesix.png",
     alt: "AnikeBrands - Creative Design Expert",
     title: "Creative Design Expert"
   },
   {
     id: 3,
-    src: "/anike photos/anikefour.PNG",
+    src: "/anike photos/anikenine.jpg",
     alt: "Olamide Fatosin - Brand Strategist",
     title: "Brand Strategist"
   },
   {
     id: 4,
-    src: "/anike photos/anikefive.JPG",
+    src: "/anike photos/anikefour.PNG",
     alt: "AnikeBrands - Design Professional",
     title: "Design Professional"
   }

@@ -13,10 +13,10 @@ const pricingPlans = [
     features: [
       "Logo Design (2 concepts)",
       "Business Card Design",
-      "Basic Brand Guidelines",
+      "Logo Identity Presentation",
       "2 Revisions",
       "Source Files",
-      "1 Week Delivery"
+      "2-3 Weeks Delivery"
     ],
     popular: false
   },
@@ -31,7 +31,7 @@ const pricingPlans = [
       "Business Card & Letterhead",
       "Social Media Templates",
       "5 Revisions",
-      "2-3 Week Delivery",
+      "3-4 Weeks Delivery",
       "Priority Support"
     ],
     popular: true
@@ -47,7 +47,7 @@ const pricingPlans = [
       "All Print Materials",
       "Web Design Mockups",
       "Unlimited Revisions",
-      "3-4 Week Delivery",
+      "4-8 Weeks Delivery",
       "Dedicated Project Manager",
       "Ongoing Support"
     ],
