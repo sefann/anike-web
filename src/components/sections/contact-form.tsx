@@ -165,13 +165,12 @@ export function ContactForm() {
               name="service"
               value={formData.service}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+              className="w-full px-4 py-3 bg-black text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 hover:bg-gray-900 transition-colors"
             >
               <option value="">Select a service</option>
               <option value="brand-identity">Brand Identity</option>
               <option value="print-design">Print Design</option>
               <option value="mobile-design">Mobile Design</option>
-              <option value="photography">Photography</option>
               <option value="illustration">Illustration</option>
               <option value="other">Other</option>
             </select>
@@ -187,10 +186,11 @@ export function ContactForm() {
             name="budget"
             value={formData.budget}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+            className="w-full px-4 py-3 bg-black text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 hover:bg-gray-900 transition-colors"
           >
             <option value="">Select budget range</option>
-            <option value="under-1000">Under $1,000</option>
+            <option value="50-500">$50 - $500</option>
+            <option value="500-1000">$500 - $1,000</option>
             <option value="1000-2500">$1,000 - $2,500</option>
             <option value="2500-5000">$2,500 - $5,000</option>
             <option value="5000-10000">$5,000 - $10,000</option>
