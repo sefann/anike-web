@@ -22,7 +22,7 @@ const pricingPlans = [
   },
   {
     name: "Professional",
-    price: "$250",
+    price: "$300",
     description: "Ideal for growing businesses",
     features: [
       "Complete Brand Identity",
